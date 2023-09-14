@@ -391,6 +391,7 @@ body.modal-active {
     flex-direction: column;
     display: flex;
     margin-top: 20px;
+    width: 100vw;
     padding-bottom: 20px;
     background-color: #ffffff;
 }
