@@ -168,3 +168,39 @@ function countdown() {
 }
 
 let countdownInterval = setInterval(countdown, 1000);
+
+
+
+//Bid Tabs
+const tabs = Array.from(document.querySelectorAll('.tab')); 
+const bids = Array.from(document.querySelectorAll('.show-content'));
+const images = Array.from(document.querySelectorAll('.show-content a img'));
+
+tabs[0].classList.add('active');
+bids[0].classList.add('active');
+
+function getTabIndex(tab) {
+  return tabs.indexOf(tab);
+};
+
+tabs.forEach((tab) => {
+  const clicked = getTabIndex(tab);
+  const checker = tab.classList.contains('active');
+
+  tab.addEventListener('click', () => {
+    clearActiveTab();
+    tabs[clicked].classList.add('active');
+    bids[clicked].classList.add('active');
+  });
+});
+
+function clearActiveTab() {
+  tabs.forEach((tab) => {
+    const hasClass = tab.classList.contains('active');
+
+    if (hasClass) {
+      tabs[getTabIndex(tab)].classList.remove('active');
+      bids[getTabIndex(tab)].classList.remove('active');
+    }
+  });
+}

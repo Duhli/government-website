@@ -173,6 +173,7 @@ body.modal-active {
 
 #nav ul li a {
     display: block;
+    border-bottom: 1px solid #dddddd;
     width: 100%;
     padding: 10px 0px;
     background-color: #9c356e;
@@ -230,7 +231,7 @@ body.modal-active {
     align-items: end;
     justify-content: center;
     display: flex;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     width: 100vw;
     height: 200px;
     background: url('https://maasincity.gov.ph/images/299039105_10159193477628505_6740115512363287166_n.jpg');
@@ -379,9 +380,155 @@ body.modal-active {
     font-size: 1.3rem;
 }
 
-.job-post h3:hover , .story h3:hover {
+.job-post:hover h3, .story:hover h3 {
     border-bottom: 3px solid #ff5fb7;
     color: #535353;
+}
+
+#bids-container {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    background-color: #ffffff;
+}
+
+#bids-container h1 {
+    align-self: self-start;
+    border-bottom: 5px solid #ff5fb7;
+    margin: 20px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    width: 80%;
+    color: #ff5fb7;
+}
+
+#bids-container p {
+    margin-top: 5px;
+    color: #ff5fb7;
+}
+
+#tabs-container {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    border-radius: 5px;
+    width: 80%;
+    padding: 5px;
+    background-color: #ffeaf6;
+}
+
+#tabs-container .tab {
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#tabs-container .tab.active {
+    background-color: #ff5fb7;
+    color: #ffffff;
+}
+
+#bid-contents {
+    margin-top: 20px;
+    padding: 10px 0px;
+    width: 80%;
+    background-color: #ffeaf6;
+}
+
+#bid-contents .show-content {
+    display: none;
+}
+
+#bid-contents .show-content.active {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.show-content a {
+    width: 80%;
+}
+
+.show-content a img {
+    width: 100%;
+}
+
+#topics-and-services-container {
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+}
+
+#topics-and-services-container h1 {
+    align-self: self-start;
+    border-bottom: 5px solid #ff5fb7;
+    margin-top: 20px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    width: 80%;
+    color: #ff5fb7;
+    font-size: 2rem;
+}
+
+#block-container {
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    padding: 30px 0px;
+    background-color: #ffeaf6;
+}
+
+#block-container .block {
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #535353ab;
+    border-radius: 3px;
+    box-shadow: 0px 5px 10px #5353532f;
+    height: 250px;
+    margin-top: 10px;
+    width: 80%;
+    background-color: #ffffff; 
+    color: #000000;
+    text-decoration: none;  
+}
+
+#block-container .block:hover .title { 
+        color: #ff5fb7;
+}
+
+#block-container .block:hover {
+    background-color: #ffeaf6;
+}
+
+#block-container .block i {
+    margin: 10px;
+    font-size: 4rem;
+    color: #ff5fb7;
+    text-align: center; 
+}
+
+#block-container .block .title {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+#block-container .block .description {
+    margin: 10px;
+    font-size: 0.9rem;
+    text-align: justify; 
 }
 
 #faq-container {

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/a/a5/Seal_of_Maasin%2C_Southern_Leyte.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js" defer></script>
     <title>Maasin City GOV - Mock-up Website</title>
 </head>
@@ -46,16 +47,19 @@
         <nav id="nav">
             <ul>
                 <li>
-                    <a href="http://" target="_blank" rel="noopener noreferrer">test</a>
+                    <a href="#topics-and-services-container">All topics and services</a>
                 </li>
                 <li>
-                    <a href="http://" target="_blank" rel="noopener noreferrer">test</a>
+                    <a href="#">The Government</a>
                 </li>
                 <li>
-                    <a href="http://" target="_blank" rel="noopener noreferrer">test</a>
+                    <a href="#">Transparency</a>
                 </li>
                 <li>
-                    <a href="http://" target="_blank" rel="noopener noreferrer">test</a>
+                    <a href="#">Tourism</a>
+                </li>
+                <li>
+                    <a href="#">Barangay</a>
                 </li>
             </ul>
         </nav>
@@ -122,7 +126,71 @@
                 </a>
             </div>
         </section>
-        <section id="topics-and-services-container"></section>
+        <section id="bids-container">
+            <h1>Latest Bids</h1>
+            <div id="tabs-container">
+                <span class="tab">Notices</span>
+                <span class="tab">To Proceed</span>
+                <span class="tab">Awards</span>
+            </div>
+            <div id="bid-contents">
+                <div id="bid-notices-container" class="show-content">
+                    <a href="https://maasincity.gov.ph/images/090623_Goods_NPB.jpg"><img src="https://maasincity.gov.ph/images/090623_Goods_NPB.jpg" alt=""></a>
+                </div>
+                <div id="bids-to-proceed-container"  class="show-content">
+                    <a href="https://maasincity.gov.ph/images/images/BIDProceed/GOODS_NTP_08-09-2023.jpg"><img src="https://maasincity.gov.ph/images/images/BIDProceed/GOODS_NTP_08-09-2023.jpg" alt=""></a>
+                </div>
+                <div id="bid-awards"  class="show-content">
+                    <a href="https://maasincity.gov.ph/images/BIDAwards/INFRA-AWARD_090123.jpg"><img src="https://maasincity.gov.ph/images/BIDAwards/INFRA-AWARD_090123.jpg" alt=""></a>
+                </div>
+            </div>
+            <p>Click image to view!</p>
+        </section>
+        <section id="topics-and-services-container">
+            <h1>All topics and services</h1>
+            <div id="block-container">
+                <a class="block" href="#">
+                    <i class="fa fa-bank"></i>
+                    <h4 class="title">The Government</h4>
+                    <p class="description">This section provides information about the government, its structure, and its services. It also includes information about how to contact government officials and how to participate in government processes.</p>
+                </a>
+                <a class="block" href="#">
+                    <i class="fa fa-user-secret"></i>
+                    <h4 class="title">Transparency</h4>
+                    <p class="description">This section provides information about how the government operates and how it uses public funds. It also includes information about how to access government records and how to file complaints about government malfeasance.</p>
+                </a>
+                <a class="block" href="#">
+                    <i class="fa fa-plane"></i>
+                    <h4 class="title">Tourism</h4>
+                    <p class="description">This section provides information about the country's tourism industry, including popular tourist destinations, travel tips, and visa requirements.</p>
+                </a>
+                <a class="block" href="#">
+                    <i class="fa fa-building-o"></i>
+                    <h4 class="title">Barangay</h4>
+                    <p class="description">This section provides information about the local government unit, or barangay. It includes information about barangay officials, services, and activities.</p>
+                </a>
+                <a class="block" href="#">
+                    <i class="fa fa-money"></i>
+                    <h4 class="title">Financial Assistance</h4>
+                    <p class="description">This section provides information about financial assistance programs offered by the government. It includes information about eligibility requirements, application procedures, and benefits.</p>
+                </a>
+                <a class="block" href="#">
+                    <i class="fa fa-ticket"></i>
+                    <h4 class="title">Taxes</h4>
+                    <p class="description">This section provides information about taxes imposed by the government. It includes information about tax rates, filing deadlines, and payment methods.</p>
+                </a>
+                <a class="block" href="#">
+                    <i class="fa fa-handshake-o"></i>
+                    <h4 class="title">Assistance</h4>
+                    <p class="description">This section provides information about a variety of assistance programs offered by the government, such as those for the elderly, the disabled, and the unemployed.</p>
+                </a>
+                <a class="block" href="#">
+                    <i class="fa fa-address-book-o"></i>
+                    <h4 class="title">Hotlines</h4>
+                    <p class="description">This section provides a list of government hotlines that can be used to report problems, get information, or seek assistance.</p>
+                </a>
+            </div>
+        </section>
         <section id="awards-and-timer-container">
             <div id="timer">
                 <div id="timer-card"></div>
@@ -164,7 +232,7 @@
                     <p class="faq-question">How can we contact you?</p>
                     <span class="faq-dropdown-icon">+</span>
                 </div>
-                <p class="faq-answer">You can contact me through Facebook at [name] or email by click the contact button at the very top right above the search icon.</p>
+                <p class="faq-answer">You can contact me through Facebook at [name] or email by clicking the contact button at the very top right above the search icon.</p>
             </div>
         </section>
     </main>
@@ -177,7 +245,9 @@
 
 
 <!-- to do:
+        'read more' for stories, careers and bids
         contact modal js and css
-        topics-and-services-container
+        topics-and-services
+        auto generated lorem ipsum content on the articles
         footer -->
           
