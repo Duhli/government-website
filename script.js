@@ -104,12 +104,12 @@ const header = document.getElementById('header');
 const upperContainer = document.getElementById('upper-container');
 const hamburgerBar = Array.from(document.querySelectorAll('#hamburger-menu .bar'));
 const logo = document.getElementById('logo');
-const magnifier = document.getElementById('magnifier');
+// const magnifier = document.getElementById('magnifier');
 
 window.addEventListener('scroll', () => {
   upperContainer.classList.toggle('sticky', window.scrollY > 0);
   logo.classList.toggle('sticky', window.scrollY > 0);
-  magnifier.classList.toggle('sticky', window.scrollY > 0);
+  // magnifier.classList.toggle('sticky', window.scrollY > 0);
   
   hamburgerBar.forEach((bar) => {
     bar.classList.toggle('sticky', window.scrollY > 0);
