@@ -92,10 +92,24 @@ dateDisplay.textContent = formattedDate;
 
 
 //Contact Modal
+const contactClose = document.getElementById('contact-close');
+
 contactButton.addEventListener('click', () => {
-  contactModalContainer.classList.toggle('active');
-  body.classList.toggle('modal-active');
+  contactModalContainer.classList.add('active');
+  body.classList.add('modal-active');
 });
+
+contactClose.addEventListener('click', () => {
+  contactModalContainer.classList.remove('active');
+  body.classList.remove('modal-active');
+});
+
+window.onclick = function(event) {
+  if (event.target == contactModalContainer) {
+    contactModalContainer.classList.remove('active');
+    body.classList.remove('modal-active');
+  }
+}
 
 
 

@@ -24,8 +24,22 @@
             <button id="contact-btn">Contact</button>
             <div id="contact-modal-container">
                 <div id="contact-modal-card">
-                    <p>text</p>
-                    <p>x</p>
+                    <div id="caution">
+                        This contact form has no functionality (<i>yet</i>). This is simply a proof of design and concept.
+                    </div>
+                    <i class="fa fa-close close-button" id="contact-close"></i>
+                    <form action="/" method="GET" id="contact-form">
+                        <h1>Get In Touch</h1>
+                        <div id="type-area">
+                                <input type="text" id="first-name" placeholder="First Name" required>
+                                <input type="text" id="last-name" placeholder="Last Name" required>
+                                <input type="text" id="email" placeholder="Email" required>
+                                <input type="text" id="phone" placeholder="Phone" required>
+                                <textarea name="message" id="message" cols="30" rows="10" form="usrform" placeholder="Enter text here..." required></textarea>
+                                <button type="submit" id="submit-button">Submit</button>
+                        </div>
+                        <div id="submit-button"></div>
+                    </form>
                 </div>
             </div>
             <img src="./images/information-symbol.svg" alt="Information Icon by iconpacks.net" id="info-symbol">
@@ -87,38 +101,38 @@
         <section id="stories-and-careers-container">
             <div id="careers">
                 <h1>Careers</h1>
-                <a href="/index.html" class="job-post">
+                <a href="#" class="job-post">
                     <h3>Branch Personnel in Ormoc & So. Leyte. Apply now!</h3>
                     <img src="https://www.comeet.com/resources/wp-content/uploads/2019/11/Office-Clerk.jpg" alt="Job Post">
                 </a>
-                <a href="/index.html" class="job-post">
+                <a href="#" class="job-post">
                     <h3>Provincial Capitol is Hiring janitors! First come, first served!</h3>
                     <img src="https://2.bp.blogspot.com/-MvWURVa2KWA/W12Zlj-goUI/AAAAAAAAtrQ/M_deDfYFUrERJIaTCAGD9BNCY7CcHUSIQCLcBGAs/s1600/janitor-student-2.jpg" alt="Job Post">
                 </a>
-                <a href="/index.html" class="job-post">
+                <a href="#" class="job-post">
                     <h3>Provincial Capitol is IT Specialist Needed! First come, first served!</h3>
                     <img src="https://outsourced.ph/wp-content/uploads/2017/06/Hire-IT-Technical-Support-Staff-Outsourced-IT-Support-2.jpg" alt="Job Post">
                 </a>
-                <a href="/index.html" class="job-post">
+                <a href="#" class="job-post">
                     <h3>Creative Director position open in Jollibee Maasin City Branch</h3>
                     <img src="https://www.ceo-review.com/wp-content/uploads/2022/02/Celebrity-CDs.jpg" alt="Job Post">
                 </a>
             </div>
             <div id="stories">
                 <h1>Stories</h1>
-                <a href="/index.html" class="story">
+                <a href="#" class="story">
                     <h3>U.S. Officials Say It Appears Likely Putin Ordered Prigozhin Killed</h3>
                     <img src="https://static01.nyt.com/images/2023/08/25/multimedia/25ukraine-header-01-jlkm/25ukraine-header-01-jlkm-mobileMasterAt3x.jpg?quality=75&auto=webp&disable=upscale&width=1800" alt="Article">
                 </a>
-                <a href="/index.html" class="story">
+                <a href="#" class="story">
                     <h3>House Republicans took aim at the Georgia prosecutor pursuing the racketeering case against Donald Trump.</h3>
                     <img src="https://static01.nyt.com/images/2023/08/24/multimedia/24dc-investigate-lmfv/24dc-investigate-lmfv-square320.jpg?format=pjpg&quality=75&auto=webp&disable=upscale" alt="Article">
                 </a>
-                <a href="/index.html" class="story">
+                <a href="#" class="story">
                     <h3>Fortnite’s next season has heists, Ahsoka, and a beefy fish</h3>
                     <img src="https://duet-cdn.vox-cdn.com/thumbor/0x0:2560x1440/128x128/filters:focal(946x712:947x713):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/24870690/Fortnite_Chapter_4_Season_4_LAST_RESORT_Cinematic_Trailer_____Fortnite_Chapter_4_Season_4_LAST_RESORT_Cinematic_Trailer_2023_8_24_84616.987_1440p_streamshot.png">
                 </a>
-                <a href="/index.html" class="story">
+                <a href="#" class="story">
                     <h3>For Native Hawaiian advocates, tech billionaires’ donations don’t go far enough</h3>
                     <img src="https://duet-cdn.vox-cdn.com/thumbor/0x0:4757x2970/128x128/filters:focal(2379x1485:2380x1486):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/24870769/1623484928.jpg" alt="Article">
                 </a>
@@ -275,9 +289,14 @@
 
 
 <!-- to do:
-        read mores
-        contact modal js and css
-        topics-and-services
-        auto generated lorem ipsum content on the articles
-        footer -->
+        pc/desktop view
+        read more [optional]
+        auto generated lorem ipsum content on the articles [optional]
+
+    Bug fixes:
+        make container featured prettier
+        hamburger press on mobile shows blue clicked link (too long)
+        announcement height dont match container on very small screens [optional]
+        modal can be backed in phone when back button is pressed
+-->
           
