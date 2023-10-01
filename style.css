@@ -14,6 +14,10 @@ html {
     padding: 0;
 }
 
+/* body {
+    position: relative;
+} */
+
 body.modal-active {
     overflow: hidden;
     height: 100vh;
@@ -25,7 +29,7 @@ body.modal-active {
     justify-content: space-between;
     display: flex;
     height: auto;
-    padding: 5px 0px;
+    padding: 5px 10px;
     background-color: #dddddd;
 }
 
@@ -76,6 +80,7 @@ body.modal-active {
     flex-direction: column;
     position: relative;
     width: 90%;
+    max-width: 540px;
     height: 500px;
     background: rgb(255,95,183);
     background: linear-gradient(0deg, rgba(255,95,183,1) 0%, rgba(255,165,215,1) 40%, rgba(255,255,255,1) 100%);
@@ -164,7 +169,12 @@ body.modal-active {
 #header {
     position: sticky;
     top: 0px;
+    transition: 0.6s;
     z-index: 1;
+}
+
+#header.sticky {
+    background: #ff5fb7;
 }
 
 #upper-container {
@@ -173,12 +183,12 @@ body.modal-active {
     display: flex;
     transition: 0.6s;
     width: 100%;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
 }
 
-#upper-container.sticky {
+/* #upper-container.sticky {
     background-color: #ff5fb7;
-}
+} */
 
 #hamburger-menu {
     flex-grow: 1;
@@ -281,17 +291,21 @@ body.modal-active {
     border-bottom: 1px solid #dddddd;
     width: 100%;
     padding: 10px 0px;
-    background-color: #9c356e;
-    color: #ffffff;
+    color: #ff5fb7;
     text-align: center;
     text-decoration: none;
+}
+
+#nav ul li a.sticky {
+    color: #ffffff;
 }
 
 #featured-container {
     position: relative;
     overflow: hidden;
     width: 100vw;
-    height: 250px;
+    /* max-width: 1000px; */
+    max-height: 580px;
 }
 
 #featured-container .featured {
@@ -338,7 +352,7 @@ body.modal-active {
     display: flex;
     /* margin-top: 30px; */
     width: 100vw;
-    height: 200px;
+    min-height: 200px;
     background: url('https://maasincity.gov.ph/images/299039105_10159193477628505_6740115512363287166_n.jpg');
     background-size: cover;
 }
@@ -450,6 +464,7 @@ body.modal-active {
     justify-content: center;
     flex-direction: column;
     display: flex;
+    /* max-width: 700px; */
 }
 
 #careers h1, #stories h1 {
@@ -496,7 +511,8 @@ body.modal-active {
     flex-direction: column;
     display: flex;
     margin-top: 20px;
-    width: 100vw;
+    width: 100%;
+    /* max-width: 530px; */
     padding-bottom: 20px;
     background-color: #ffffff;
 }
@@ -527,6 +543,7 @@ body.modal-active {
 }
 
 #tabs-container .tab {
+    flex-grow: 1;
     border-radius: 5px;
     margin: 5px;
     padding: 10px;
@@ -753,6 +770,7 @@ body.modal-active {
     margin-top: 20px;
     gap: 2rem;
     width: 100%;
+    max-width: 500px;
 }
 
 #footer img {
@@ -768,9 +786,228 @@ body.modal-active {
     font-size: 1rem;
 }
 
+#to-top-button {
+    display: none;
+}
+
 
 @media (min-width: 480px) {
+
+    html {
+        scroll-behavior: smooth;
+        scroll-padding: 30rem;
+    }
     
+    #header {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #upper-container {
+        margin: 0px;
+        width: 100px;
+    }
     
+    #logo {
+        margin: 20px;
+        width: 100px;
+        height: 100px;
+    }
+
+    #logo.sticky {
+        margin: 10px;
+        width: 70px;
+        height: 70px;
+    }
+
+    #hamburger-menu {
+        display: none;
+    }
+
+    #nav {
+        display: flex;
+        justify-content: center;
+        border-top: 1px solid #dddddd;
+        border-bottom: 1px solid #dddddd;
+        width: 100%;
+        height: 41px;
+    }
+
+    #nav.sticky {
+        display: none;
+    }
+
+    #nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+        height: auto;
+        width: 100%;
+        font-weight: 600;
+    }
+
+    #nav ul li {
+        width: auto;
+    }
+    
+    #nav ul li a {
+        display: block;
+        border-bottom: none;
+        padding: 10px 0px;
+        color: #ff5fb7;
+        text-align: center;
+        text-decoration: none;
+        /* background-color: red; */
+    }
+
+    #nav ul li a:hover {
+        border-bottom: 3px solid #ff5fb7;
+    }
+    
+    #main {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #current-date {
+        width: 100%;
+    }
+
+    #current-date p {
+        font-size: 0.8rem;
+    }
+    
+    #stories-and-careers-container {
+        padding-top: 50px;
+        width: 80%;
+        display: flex;
+    }
+
+    #careers, #stories {
+        width: 50%;
+    }
+
+    #bids-container {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        display: flex;
+        margin-top: 20px;
+        padding: 50px 0px;
+        width: 80%;
+        /* max-width: 530px; */
+        padding-bottom: 20px;
+        background-color: #ffffff;
+    }
+    
+    #bids-container h1 {
+        margin: 20px 0;
+        padding-bottom: 5px;
+        padding-left: 0;
+        width: 100%;
+    }
+
+    #tabs-container {
+        justify-content: space-evenly;
+    }
+    
+    #tabs-container span.tab {
+        flex-grow: 1;
+        padding: 15px 0;
+        font-size: 1rem;
+    }
+
+    #block-container {
+        gap: 0.7rem;
+        padding: 50px 0px;
+    }
+
+    #block-container .block {
+        width: 400px;
+        height: 300px;
+    }
+
+    #awards-and-timer-container {
+        align-items: stretch;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    #timer, #awards {
+        width: 50%;
+    }
+    
+    #award-container {
+        width: 100%;
+    }
+
+    #faq-container {
+       padding: 50px 0px;
+    }
+
+    #faq-container h1 {
+        margin-left: 10%;
+    }
+
+    #footer, #bottom-footer {
+        align-items: flex-start;
+    }
+
+    #footer {
+       padding-top: 50px;
+    }
+
+    #upper-footer, #bottom-footer {
+        margin: 0;
+        width: 50%;
+    }
+
+    #to-top-button {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        background-color: #ff5fb7;
+        color: #ffffff;
+        font-size: 3rem;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    #to-top-button.sticky {
+        position: fixed;
+        display: block;
+    }
+    
+
+}
+
+@media (min-width: 800px) {
+
+    #nav ul {
+        width: 80%;
+    }
+
+}
+
+@media (min-width: 1400px) {
+
+    #nav ul {
+        width: 50%;
+    }
+
+}
+
+@media (min-width: 1900px) {
+
+    #nav ul {
+        width: 40%;
+    }
 
 }

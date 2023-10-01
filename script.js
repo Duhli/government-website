@@ -1,3 +1,10 @@
+//For announcements
+// window.onload = () => {
+//   alert('If user is on a mobile tablet, please use the device\'s landscape mode to view the page. Vetical tablet view is still in development. Thank you!')
+// }
+
+
+
 //Global Variables
 const hamburgerMenu = document.getElementById('hamburger-menu');
 const dropdownMainMenu = document.querySelector('#nav ul');
@@ -117,13 +124,23 @@ window.onclick = function(event) {
 const header = document.getElementById('header');
 const upperContainer = document.getElementById('upper-container');
 const hamburgerBar = Array.from(document.querySelectorAll('#hamburger-menu .bar'));
+const nav = document.getElementById('nav');
+const navLinks = Array.from(document.querySelectorAll('#nav ul li a'));
 const logo = document.getElementById('logo');
 // const magnifier = document.getElementById('magnifier');
+const toTopBtn = document.getElementById('to-top-button');
 
 window.addEventListener('scroll', () => {
+  header.classList.toggle('sticky', window.scrollY > 0);
   upperContainer.classList.toggle('sticky', window.scrollY > 0);
   logo.classList.toggle('sticky', window.scrollY > 0);
+  nav.classList.toggle('sticky', window.scrollY > 0);
   // magnifier.classList.toggle('sticky', window.scrollY > 0);
+  toTopBtn.classList.toggle('sticky', window.scrollY > 0);
+  
+  navLinks.forEach((link) => {
+    link.classList.toggle('sticky', window.scrollY > 0);
+  });
   
   hamburgerBar.forEach((bar) => {
     bar.classList.toggle('sticky', window.scrollY > 0);
